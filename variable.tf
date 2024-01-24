@@ -37,8 +37,6 @@ variable "user_address_map" {
     user1="a"
     user2="b"
     user3="c"
-   
-    
   }
 }
 

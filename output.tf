@@ -1,3 +1,12 @@
+output "path_of_file1" {
+  value = var.path_to_file1
+}
+output "path_of_file2" {
+  value = var.path_to_file2
+}
+output "path_of_file3" {
+  value = var.path_to_file3
+}
 output "user_id" {
   value = local.current_user_id
 }

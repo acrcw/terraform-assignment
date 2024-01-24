@@ -1,1 +1,14 @@
-joban 
+Content for File 2
+current_user = "karandeep"
+current_user_id = "0"
+
+Example List: chandigarh, delhi, punjab
+Example List: joban, inder, harman, joban, inder, harman, joban, inder, harman, joban, inder, harman
+
+Example Map:
+harman = true
+inder = true
+joban = false
+
+
+   
