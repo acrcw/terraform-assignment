@@ -1,12 +1,23 @@
+
 resource "local_file" "file1" {
-  filename = "${path.module}/dir1/file1.txt"# path to file
-  content = "The value of number variable =${var.number_1} "
+  filename = "${path.module}/${var.path_to_file1}"# path to file
+  content = "${var.current_user} "
 }
 resource "local_file" "file2" {
-  filename = "${path.module}/dir2/file2.txt"# path to file
-  content = 
+  filename = "${path.module}/${var.path_to_file2}"# path to file
+  content = "This is the content of the file 2"
 }
 resource "local_file" "file3" {
-  filename = "${path.module}/dir3/file3.txt"# path to file
+  filename = "${path.module}/${var.path_to_file3}"# path to file
   content = "This is the content of the file 3"
+}
+
+
+
+resource "random_id" "user_id_generator" {
+   byte_length = 8
+}
+
+locals {
+  current_user_id=random_id.user_id_generator.hex
 }
