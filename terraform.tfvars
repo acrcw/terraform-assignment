@@ -1,5 +1,5 @@
-current_user = "joban"
-current_user_set_password = false
+current_user = "joban" 
+current_user_set_password = false 
 current_user_id = 0
 user_names = [ "joban","inder","harman","chandan","pallvi"]
 user_address = [ "chandigarh","delhi","punjab","ludhiana","birampur"]
