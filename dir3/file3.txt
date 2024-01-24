@@ -2,7 +2,7 @@ This file contains Info of the all maps used in the this project
   
 
 Map:
- chandan = false
+chandan = false
 harman = true
 inder = true
 joban = false
