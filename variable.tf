@@ -78,18 +78,35 @@ variable "user_set_password_map" {
     user3=true
   }
 }
-variable "user_object" {
-  type = object({
+# variable "user_object" {
+#   type = object({
+#     name    = string
+#     LPA     = number
+#     address = string
+#     password = bool
+#   })
+
+#   default = {
+#     name    = "John Doe"
+#     LPA     = 30
+#     address = "USA"
+#     password = false
+#   }
+# }
+variable "user_map_objects" {
+  type = map(object({
     name    = string
     LPA     = number
     address = string
     password = bool
-  })
-
+  }))
   default = {
-    name    = "John Doe"
-    LPA     = 30
+    user1={
+    name    = "joban"
+    LPA     = 4
     address = "USA"
     password = false
+    }
   }
+  
 }

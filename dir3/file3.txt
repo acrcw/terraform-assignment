@@ -1,11 +1,7 @@
-Content for File 3
-current_user = "joban"
-current_user_id = "0"
+This file contains Info of the all maps used in the this project
+  
 
-Example List: chandigarh, delhi, punjab, ludhiana, birampur
-Example List: joban, inder, harman, chandan, pallvi
-
-Example Map:
+Map:
 chandan = false
 harman = true
 inder = true
