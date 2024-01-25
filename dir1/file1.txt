@@ -2,15 +2,9 @@ This file contains Info about current user
 current_user = "joban"
 current_user_id = "0"
 
-Example List: chandigarh, delhi, punjab, ludhiana, birampur
-Example List: joban, inder, harman, chandan, pallvi
+    
 
-Example Map:
-chandan = false
-harman = true
-inder = true
-joban = false
-pallvi = true
+   
 
 
    

@@ -6,11 +6,9 @@ resource "local_file" "file1" {
     current_user = "${var.current_user}"
     current_user_id = "${var.current_user_id}"
 
-    Example List: ${join(", ", var.user_address)}
-    Example List: ${join(", ", var.user_names)}
+    
 
-    Example Map:
-    ${join("\n", [for k, v in var.user_set_password_map : "${k} = ${v}"])}
+   
 
 
    
@@ -24,6 +22,8 @@ resource "local_file" "file2" {
     List of all the users: ${join(", ", var.user_names)}
     List of all the users addresses: ${join(", ", var.user_address)}
 
+    Content of user_object_list
+    ${join("\n", [for user in var.user_object_list : "Name: ${user.name}, LPA: ${user.LPA}, Address: ${user.address}, Password: ${user.password}"])}
     
 
 
@@ -35,12 +35,16 @@ resource "local_file" "file3" {
   content = <<-EOT
     This file contains Info of the all maps used in the this project
   
-
-    Map:
-     ${join("\n", [for k, v in var.user_set_password_map: "${k} = ${v}"])}
-
-
-   
+    map of user address:
+    ${join("\n", [for k, v in var.user_address_map : "${k} = ${v}"])}
+    map of user_designation_map:\n
+    ${join("\n", [for k, v in var.user_designation_map : "${k} = ${v}"])}
+    map of user address:\n
+    ${join("\n", [for k, v in var.user_LPA_map : "${k} = ${v}"])}
+    map of user address:\n
+    ${join("\n", [for k, v in var.user_set_password_map : "${k} = ${v}"])}
+    map of user address:\n
+    ${join("\n", [for k, v in var.user_verified_map : "${k} = ${v}"])}
   EOT
 }
 

@@ -2,6 +2,11 @@ This file contains Info about all the users
 List of all the users: joban, inder, harman, chandan, pallvi
 List of all the users addresses: chandigarh, delhi, punjab, ludhiana, birampur
 
+Content of user_object_list
+Name: Joban, LPA: 5, Address: Punjab, Password: true
+Name: inder, LPA: 4, Address: Punjab, Password: true
+Name: harman, LPA: 6, Address: delhi, Password: true
+Name: chandan, LPA: 7, Address: Punjab, Password: true
     
 
 

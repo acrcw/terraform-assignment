@@ -38,3 +38,17 @@ user_verified_map = {
   chandan=false
   pallvi=true
 }
+
+user_object_list=[{ name    = "Joban"
+    LPA     = 5
+    address = "Punjab"
+    password = true},{ name    = "inder"
+    LPA     = 4
+    address = "Punjab"
+    password = true},{ name    = "harman"
+    LPA     = 6
+    address = "delhi"
+    password = true},{ name    = "chandan"
+    LPA     = 7
+    address = "Punjab"
+    password = true}]

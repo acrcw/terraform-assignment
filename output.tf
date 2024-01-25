@@ -42,5 +42,5 @@ output "current_user_set_password" {
   value = var.user_set_password_map
 }
 output "user_object" {
-  value = var.user_object
+  value = var.user_object_list
 }

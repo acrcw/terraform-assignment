@@ -1,12 +1,32 @@
 This file contains Info of the all maps used in the this project
   
-
-Map:
+map of user address:
+chandan = ludhiana
+harman = punjab
+inder = delhi
+joban = chandigarh
+pallvi = birampur
+map of user_designation_map:\n
+chandan = crewing manager
+harman = cheif
+inder = cadet
+joban = trainee
+pallvi = cto
+map of user address:\n
+chandan = 7
+harman = 5
+inder = 3
+joban = 12
+pallvi = 6
+map of user address:\n
 chandan = false
 harman = true
 inder = true
 joban = false
 pallvi = true
-
-
-   
+map of user address:\n
+chandan = false
+harman = true
+inder = true
+joban = false
+pallvi = true
