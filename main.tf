@@ -14,8 +14,7 @@ resource "local_file" "file2" {
   content = <<-EOT
     This file contains Info about all the users
     Content of user_object_list
-    ${join("\n", [for i, user in var.user_object_list
-: "\nID: ${random_id.user_id_generator[i].hex},\nName: ${user.name},\nLPA: ${user.CTC},\nAddress: ${user.address},\nPassword: ${random_password.user_password[i].result}  ,\nVerified: ${user.verified} ,\nManager: ${user.manager} ,\nDesignation: ${user.designation} \nSkills: ${join("\t, ", user.skills)}\nDetails:\n${join("\n", [for k, v in user.details : "  ${k}: ${v}"])}"])}
+    ${join("\n", [for i, user in var.user_object_list: "\nID: ${random_id.user_id_generator[i].hex},\nName: ${user.name},\nLPA: ${user.CTC},\nAddress: ${user.address},\nPassword: ${random_password.user_password[i].result}  ,\nVerified: ${user.verified} ,\nManager: ${user.manager} ,\nDesignation: ${user.designation} \nSkills: ${join("\t, ", user.skills)}\nDetails:\n${join("\n", [for k, v in user.details : "  ${k}: ${v}"])}"])}
 
   EOT
 }
