@@ -1,6 +1,7 @@
 User Details for Joban:
 Name: Joban
 CTC: 5
+NickName: CEQ-dassie
 Address: Punjab
 Password: true
 Verified: true
@@ -8,12 +9,15 @@ Designation: trainnee
 Skills: java, c, c++
 Details:
   department: engineering
-  role: admin
- 
+
+role: admin
+
+
 
 User Details for inder:
 Name: inder
 CTC: 4
+NickName: CEQ-bullfrog
 Address: Punjab
 Password: true
 Verified: true
@@ -21,12 +25,15 @@ Designation: trainnee
 Skills: java, c, c++
 Details:
   department: engineering
+
 role: admin
+
 
 
 User Details for harman:
 Name: harman
 CTC: 6
+NickName: CEQ-titmouse
 Address: delhi
 Password: true
 Verified: true
@@ -34,12 +41,15 @@ Designation: trainnee
 Skills: Python, JavaScript, SQL
 Details:
   department: engineering
+
 role: admin
+
 
 
 User Details for chandan:
 Name: chandan
 CTC: 7
+NickName: CEQ-titmouse
 Address: Punjab
 Password: true
 Verified: true
@@ -47,4 +57,6 @@ Designation: trainnee
 Skills: Docker, Kubernetes, AWS
 Details:
   department: engineering
+
 role: admin
+
