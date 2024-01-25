@@ -8,10 +8,8 @@ Verified: true
 Designation: trainnee
 Skills: java, c, c++
 Details:
-  department: engineering
-
-role: admin
-
+  department:engineering	
+role:admin	
 
 
 User Details for inder:
@@ -24,10 +22,8 @@ Verified: true
 Designation: trainnee
 Skills: java, c, c++
 Details:
-  department: engineering
-
-role: admin
-
+  department:engineering	
+role:admin	
 
 
 User Details for harman:
@@ -40,10 +36,8 @@ Verified: true
 Designation: trainnee
 Skills: Python, JavaScript, SQL
 Details:
-  department: engineering
-
-role: admin
-
+  department:engineering	
+role:admin	
 
 
 User Details for chandan:
@@ -56,7 +50,5 @@ Verified: true
 Designation: trainnee
 Skills: Docker, Kubernetes, AWS
 Details:
-  department: engineering
-
-role: admin
-
+  department:engineering	
+role:admin	

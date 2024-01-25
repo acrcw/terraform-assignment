@@ -56,7 +56,7 @@ locals {
     Designation: ${user.designation}
     Skills: ${join(", ", user.skills)}
     Details:
-      ${join("\n", [for k, v in user.details : "${k}: ${v}\n"])}
+      ${join("\n", [for k, v in user.details : "${k}:${v}\t"])}
   EOT
   ]
 }
