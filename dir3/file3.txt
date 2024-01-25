@@ -1,26 +1,50 @@
-This file contains Info of the all maps used in the this project
-  
-map of user address:
-user1 = a
-user2 = b
-user3 = c
-map of user_designation_map:\n
-user1 = a
-user2 = b
-user3 = c
-map of user address:\n
-user1 = 12
-user2 = 34
-user3 = 4
-map of user address:\n
-chandan = false
-harman = true
-inder = true
-joban = false
-pallvi = true
-map of user address:\n
-chandan = false
-harman = true
-inder = true
-joban = false
-pallvi = true
+User Details for Joban:
+Name: Joban
+CTC: 5
+Address: Punjab
+Password: true
+Verified: true
+Designation: trainnee
+Skills: java, c, c++
+Details:
+  department: engineering
+role: admin
+
+
+User Details for inder:
+Name: inder
+CTC: 4
+Address: Punjab
+Password: true
+Verified: true
+Designation: trainnee
+Skills: java, c, c++
+Details:
+  department: engineering
+role: admin
+
+
+User Details for harman:
+Name: harman
+CTC: 6
+Address: delhi
+Password: true
+Verified: true
+Designation: trainnee
+Skills: Python, JavaScript, SQL
+Details:
+  department: engineering
+role: admin
+
+
+User Details for chandan:
+Name: chandan
+CTC: 7
+Address: Punjab
+Password: true
+Verified: true
+Designation: trainnee
+Skills: Docker, Kubernetes, AWS
+Details:
+  department: engineering
+role: admin

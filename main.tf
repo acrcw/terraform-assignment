@@ -2,16 +2,10 @@
 resource "local_file" "file1" {
   filename = "${path.module}/${var.path_to_file1}" # path to file
   content  = <<-EOT
-    This file contains Info about current user
-    current_user = "${var.current_user_id}"
-    current_user_name = "${var.current_user}"
-
-    
-
-   
-
-
-   
+    This file contains Info about current user using locals
+    current_user = "${local.current_user_id}"
+    current_user_nickname = "${local.current_user_nickname}"
+    current_user_set_password = "${local.current_user_password}
   EOT
 }
 resource "local_file" "file2" {
@@ -19,34 +13,15 @@ resource "local_file" "file2" {
 
   content = <<-EOT
     This file contains Info about all the users
-    List of all the users: ${join(", ", var.user_names)}
-    List of all the users addresses: ${join(", ", var.user_address)}
-    
     Content of user_object_list
-    ${join("\n", [for i, user in var.user_object_list : "ID: ${random_id.user_id_generator[i].hex}, Name: ${user.name}, LPA: ${user.LPA}, Address: ${user.address}, Password: ${random_password.user_password[i].result}"])}
-   
-    
+    ${join("\n", [for i, user in var.user_object_list
+: "\nID: ${random_id.user_id_generator[i].hex},\nName: ${user.name},\nLPA: ${user.CTC},\nAddress: ${user.address},\nPassword: ${random_password.user_password[i].result}  ,\nVerified: ${user.verified} ,\nManager: ${user.manager} ,\nDesignation: ${user.designation} \nSkills: ${join("\t, ", user.skills)}\nDetails:\n${join("\n", [for k, v in user.details : "  ${k}: ${v}"])}"])}
 
-
-   
   EOT
 }
 resource "local_file" "file3" {
   filename = "${path.module}/${var.path_to_file3}" # path to file
-  content  = <<-EOT
-    This file contains Info of the all maps used in the this project
-  
-    map of user address:
-    ${join("\n", [for k, v in var.user_address_map : "${k} = ${v}"])}
-    map of user_designation_map:\n
-    ${join("\n", [for k, v in var.user_designation_map : "${k} = ${v}"])}
-    map of user address:\n
-    ${join("\n", [for k, v in var.user_LPA_map : "${k} = ${v}"])}
-    map of user address:\n
-    ${join("\n", [for k, v in var.user_set_password_map : "${k} = ${v}"])}
-    map of user address:\n
-    ${join("\n", [for k, v in var.user_verified_map : "${k} = ${v}"])}
-  EOT
+  content  = join("\n\n", local.formatted_user_details)
 }
 
 
@@ -60,6 +35,19 @@ locals {
   current_user_id       = random_id.user_id_generator[0].hex
   current_user_nickname = var.current_user
   current_user_password = random_password.user_password[0].result
+  formatted_user_details = [for user in var.user_object_list : <<-EOT
+    User Details for ${user.name}:
+    Name: ${user.name}
+    CTC: ${user.CTC}
+    Address: ${user.address}
+    Password: ${user.password}
+    Verified: ${user.verified}
+    Designation: ${user.designation}
+    Skills: ${join(", ", user.skills)}
+    Details:
+      ${join("\n", [for k, v in user.details : "${k}: ${v}"])}
+  EOT
+  ]
 }
 
 resource "random_password" "user_password" {

@@ -1,10 +1,4 @@
-This file contains Info about current user
-current_user = "joban"
-current_user_id = "0"
-
-    
-
-   
-
-
-   
+This file contains Info about current user using locals
+current_user = "9fbff7e4224e4866"
+current_user_nickname = "anonymous"
+current_user_set_password = "fvhC!n6>)3wiq*yP
