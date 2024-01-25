@@ -1,95 +1,95 @@
 # declare variables here
 
 variable "path_to_file1" {
-  type = string
+  type    = string
   default = "dir1/file1.txt"
 }
 variable "path_to_file2" {
-  type = string
+  type    = string
   default = "dir2/file2.txt"
 }
 variable "path_to_file3" {
-  type = string
+  type    = string
   default = "dir3/file3.txt"
 }
 variable "current_user" {
-  type = string
+  type    = string
   default = "anonymous"
 }
 variable "user_names" {
-  type = list(string)
+  type        = list(string)
   description = "this is a list of strings"
-  default = ["default_val1","default_val2","default_val3"]
+  default     = ["default_val1", "default_val2", "default_val3"]
 }
 variable "user_address" {
-  type = list(string)
+  type        = list(string)
   description = "this is a list of adresses"
-  default = ["default_ad1","default_ad2","default_ad3"]
+  default     = ["default_ad1", "default_ad2", "default_ad3"]
 }
 
 variable "current_user_id" {
-  type = number
-  default =0
+  type    = number
+  default = 0
 }
 variable "user_address_map" {
   type = map(string)
   default = {
-    user1="a"
-    user2="b"
-    user3="c"
+    user1 = "a"
+    user2 = "b"
+    user3 = "c"
   }
 }
 
 variable "user_designation_map" {
   type = map(string)
   default = {
-    user1="a"
-    user2="b"
-    user3="c"
+    user1 = "a"
+    user2 = "b"
+    user3 = "c"
   }
 }
 
 variable "user_verified_map" {
   type = map(bool)
   default = {
-   user1=true
-    user2=false
-    user3=true
+    user1 = true
+    user2 = false
+    user3 = true
   }
 }
 variable "user_LPA_map" {
   type = map(number)
   default = {
-    user1=12
-    user2=34
-    user3=4
+    user1 = 12
+    user2 = 34
+    user3 = 4
   }
 }
 
 variable "current_user_set_password" {
-  type = bool
+  type    = bool
   default = false
 }
 variable "user_set_password_map" {
   type = map(bool)
   default = {
-    user1=true
-    user2=false
-    user3=true
+    user1 = true
+    user2 = false
+    user3 = true
   }
 }
 variable "user_object_list" {
   type = list(object({
-    name    = string
-    LPA     = number
-    address = string
-    password = bool
+    name     = string
+    LPA      = number
+    address  = string
+    password = string
   }))
 
   default = [{
-    name    = "John Doe"
-    LPA     = 30
-    address = "USA"
-    password = false
+    name     = "John Doe"
+    LPA      = 30
+    address  = "USA"
+    password = "default"
   }]
 }

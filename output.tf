@@ -14,7 +14,7 @@ output "current_user_nickname" {
   value = local.current_user_nickname
 }
 output "current_user_password" {
-  value = local.current_user_password
+  value     = local.current_user_password
   sensitive = true
 }
 output "user_names_list" {

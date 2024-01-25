@@ -1,10 +1,10 @@
 
 resource "local_file" "file1" {
-  filename = "${path.module}/${var.path_to_file1}"# path to file
-  content = <<-EOT
+  filename = "${path.module}/${var.path_to_file1}" # path to file
+  content  = <<-EOT
     This file contains Info about current user
-    current_user = "${var.current_user}"
-    current_user_id = "${var.current_user_id}"
+    current_user = "${var.current_user_id}"
+    current_user_name = "${var.current_user}"
 
     
 
@@ -15,15 +15,16 @@ resource "local_file" "file1" {
   EOT
 }
 resource "local_file" "file2" {
-  filename = "${path.module}/${var.path_to_file2}"# path to file
-  
+  filename = "${path.module}/${var.path_to_file2}" # path to file
+
   content = <<-EOT
     This file contains Info about all the users
     List of all the users: ${join(", ", var.user_names)}
     List of all the users addresses: ${join(", ", var.user_address)}
-
+    
     Content of user_object_list
-    ${join("\n", [for user in var.user_object_list : "Name: ${user.name}, LPA: ${user.LPA}, Address: ${user.address}, Password: ${user.password}"])}
+    ${join("\n", [for i, user in var.user_object_list : "ID: ${random_id.user_id_generator[i].hex}, Name: ${user.name}, LPA: ${user.LPA}, Address: ${user.address}, Password: ${random_password.user_password[i].result}"])}
+   
     
 
 
@@ -31,8 +32,8 @@ resource "local_file" "file2" {
   EOT
 }
 resource "local_file" "file3" {
-  filename = "${path.module}/${var.path_to_file3}"# path to file
-  content = <<-EOT
+  filename = "${path.module}/${var.path_to_file3}" # path to file
+  content  = <<-EOT
     This file contains Info of the all maps used in the this project
   
     map of user address:
@@ -51,16 +52,18 @@ resource "local_file" "file3" {
 
 
 resource "random_id" "user_id_generator" {
-   byte_length = 8
+  count       = length(var.user_object_list)
+  byte_length = 8
 }
 
 locals {
-  current_user_id=random_id.user_id_generator.hex
-  current_user_nickname=var.current_user
-  current_user_password=random_password.user_password.result
+  current_user_id       = random_id.user_id_generator[0].hex
+  current_user_nickname = var.current_user
+  current_user_password = random_password.user_password[0].result
 }
 
 resource "random_password" "user_password" {
-  length           = 16
-  special          = true
+  count   = length(var.user_object_list)
+  length  = 16
+  special = true
 }
