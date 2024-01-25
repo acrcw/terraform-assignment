@@ -4,7 +4,7 @@ This Terraform project manages user details and generates formatted output files
 
 ## Overview
 
-The project is structured to create a local file with formatted content for each user defined in the configuration. It utilizes Terraform features such as variables, locals, and provisioners to achieve this.
+The project is structured to create a local file with formatted content for each user defined in the configuration. It utilizes Terraform features such as variables, locals,random resources to achive this
 
 ## Prerequisites
 
