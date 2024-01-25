@@ -8,8 +8,8 @@ Designation: trainnee
 Skills: java, c, c++
 Details:
   department: engineering
-role: admin
-
+  role: admin
+ 
 
 User Details for inder:
 Name: inder
